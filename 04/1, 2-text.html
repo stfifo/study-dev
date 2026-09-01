@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+        th, td {padding:10px 20px;}
+    </style>
+</head>
+<body>
+    <h1>레드향</h1>
+    <p>껍질이 붉은색이라 레드향이라고 불린다</p>
+    <p>
+        레드향은 한라봉과 귤을 교배한 것으로 <br>
+        일반 귤보다 2배 크고 과육이 붉다
+    </p>
+    <p>
+        <b>비타민c</b>가 풍부해<br>
+        <i>사람들의 </i>건강에 좋다
+    </p>
+    <h2 id="link-list">list</h2>
+
+    <ul> 재료
+        <li>레드향 1</li>
+        <li>tomato 1</li>
+    </ul>
+
+
+    <ol>
+        <li>채소 씻기</li>
+        <li>slice</li>
+    </ol>
+
+    <dl>
+		<dt>과일</dt>
+		<dd>사과</dd>
+        <dd>배</dd>
+        <dd>체리</dd>
+	</dl>
+
+        <dl>
+		<dt>채소</dt>
+		<dd>옥수수</dd>
+        <dd>토마토</dd>
+        <dd>양상추</dd>
+	</dl>
+
+    <h2 id="link-table">make table</h2>
+    <table>
+        <caption>table title</caption>
+        <colgroup>
+            <col>
+            <col style="background-color: #ccc;">
+            <col style="width: 150px;">
+        </colgroup>
+        <thead>
+        <tr>
+            <th>1col</th>
+            <th>2col</th>
+            <th>3col</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1row 1col</td>
+            <td>1row 2col</td>
+            <td>1row 3col</td>
+        </tr>
+        <tr>
+            <td>2row 1col</td>
+            <td>2row 2col</td>
+            <td>2row 3col</td>
+        </tr>
+        <tr>
+            <td>3row 1col</td>
+            <td>3row 2col</td>
+            <td>3row 3col</td>
+        </tr>
+        <tr>
+            <td>4row 1col</td>
+            <td>4row 2col</td>
+            <td>4row 3col</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">table foot - summary</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br>
+    <hr>
+
+    <h2>insert audio, video</h2>
+    <figure>
+        <img src="images/tangerines.jpg" alt="레드향" width="75%">
+        <img src="images/salad.jpg" alt="salad" height="250">
+        <figcaption>food image</figcaption>
+    </figure>
+
+    <img src="images/tangerines.jpg" srcset="images/salad.jpg 200w, images/link.jpg 300w" alt="image set">
+    <br>
+
+    <object width="700" height="500" data="product.pdf"></object><br><br>
+
+    <embed src="medias/spring.mp3" height="60"><br><br>
+
+    <audio src="medias/spring.mp3" controls></audio>
+
+    <video src="medias/salad.mp4" muted width="500"></video>
+
+    <h2>insert hyperlink</h2>
+    <p>
+        <a href="order.html" target="_blank">주문서 작성하기</a>
+        <a href="order.html" target="_blank"><img src="images/salad.jpg" alt="salad image"></a>
+    </p>
+    
+    anchor
+    <ul>
+        <li><a href="#link-list">link-list</a></li>
+        <li><a href="#link-table">link-table</a></li>
+    </ul>
+
+
+</body>
+</html>
