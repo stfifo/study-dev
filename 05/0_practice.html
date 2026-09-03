@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0902 study</title>
+    <style>
+      /* 버튼 이미지를 수직으로 정렬하기 위한 스타일 */
+     input[type="image"] {
+       vertical-align: middle;
+     }
+	 </style>
+</head>
+<body>
+    <h2>insert form</h2>
+    <form>
+        <fieldset>
+            <legend>상품 선택</legend>
+        </fieldset>
+        <fieldset><legend>배송 정보</legend></fieldset>
+    </form>
+
+    <form>
+        <label>아이디 6자 이상<input type="text"></label>
+        <br>
+        <label for="user-id">아이디 6자 이상</label>
+        <input type="text" id="user-id">
+    </form><br>
+
+    <h2>input tag for user input</h2>
+
+    <form>
+        <fieldset>
+            <label>ID : <input type="text" id="user-id" size="10"></label>
+            <label>PW : <input type="password" id="user-pw" size="10"></label>
+            <input type="submit" value="login">
+        </fieldset>
+    </form>
+
+    <fieldset>
+        <legend>135 page</legend>
+        <ul>
+            <li>
+                <label for="uesr-name">이름</label>
+                <input type="text" id="user-name">
+            </li>
+            <li>
+                <label for="addr">배송 주소</label>
+                <input type="text" id="addr">
+            </li>
+            <li>
+                <label for="user-mail">email address</label>
+                <input type="email" id="user-mail">
+                <input type="submit" value="enter">
+            </li>
+            <li>
+                <label for="user-tel">user tel</label>
+                <input type="tel" id="user-tel">
+            </li>
+            <li>
+                <label for="user-search">search</label>
+                <input type="search" id="user-search">
+            </li>
+            <li>
+                <label for="user-url">url</label>
+                <input type="url" id="user-url">
+            </li>
+        </ul>
+    </fieldset><br>
+
+    <fieldset>
+        <legend>137 page</legend>
+        <p>checkbox 선택하기</p>
+        <ul>
+            <li>
+                <input type="checkbox" id="check1" name="check" value="1">
+                <label for="check1">1</label>
+            </li>
+            <li><label><input type="checkbox" name="check" value="2">2</label></li>
+            <li><label><input type="checkbox" name="check" value="3" checked>3</label></li>
+        </ul>
+
+        <p>radio 선택하기</p>
+        <ul>
+            <li><label>1<input type="radio" name="radioo" value="1"></label></li>
+            <li><label>2<input type="radio" name="radioo" value="2" checked></label></li>
+            <li><label>3<input type="radio" name="radioo" value="3"></label></li>
+        </ul>
+    </fieldset>
+
+    <h2>138page: 회원가입 신청서 만들기</h2>
+    <form>
+        <fieldset>
+            <legend>사용자 정보</legend>
+            <ul>
+                <li>
+                    <label for="id">아이디 </label>
+                    <input type="text" id="id">
+                </li>
+                <li><label>이메일 <input type="email"></label></li>
+                <li><label>비밀번호 <input type="password"></label></li>
+                <li>
+                    <label for="pwd-2">비밀번호 확인 </label>
+                    <input type="password" id="pwd-2">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>이벤트와 새로운 소식</legend>
+            <input type="radio" name="radio-email" value="email">
+            <input type="radio" name="radio-email" value="not-email">
+        </fieldset>
+        <div>
+            <input type="submit" value="가입하기">
+            <input type="submit" value="취소">            
+        </div>
+
+    </form>
+
+    <h2>other tags</h2>
+    <form>
+        <fieldset>
+            <legend>number input field / date</legend>
+            <label>apple 1~10 <input type="number" min="1" max="10" value="1"></label><br>
+            <label>banana 1~10 <input type="range" min="1" max="10" value="3" oninput="document.getElementById('selected-value').innerText = this.value"></label><span id="selected-value">3</span>
+            <br><br>
+            <input type="date" min="2026-01-01" max="2026-12-31" value="2026-09-02"> <input type="month"> <input type="week"><br>
+            <input type="time"> <input type="datetime-local">
+        </fieldset>
+        <fieldset>
+            <legend>submit-reset / image / file / hidden</legend>
+            <label>전송하기 <input type="submit" value="submit/return"></label>
+            <label>리셋하기 <input type="reset" value="reset"></label>
+            <br><br>
+
+            <input type="hidden" name="url" value="0902-공부 기록">
+            <label>ID <input type="text" id="user-id" size="10"></label>
+            <label>PW <input type="password" id="user-pw" size="10"></label>
+            <input type="image" src="images/login.png" alt="login-image">
+            <br><br>
+
+            <input type="button" value="공지 창 열기" onclick="window.open('notice.html', '_blank', 'width=300,height=400')">
+            <br><br>
+            반품 신청시 상품의 상태를 사진으로 첨부해주세요.<br>
+            <input type="file">
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>155 page</legend>
+            <label for="user_name">이름 </label>
+            <input type="text" id="user_name" autofocus size="30"><br>
+            <label>연락처 <input type="tel" placeholder="하이픈(-) 빼고 입력하세요" size="30"></label><br>
+
+            <label>배송 주소 <input type="text" required></label>
+        </fieldset>
+        <div>
+            <input type="submit" value="return">
+            <input type="reset" value="cancel">
+        </div>
+    </form>
+
+    <h2>practice 155 page</h2>
+    <form>
+        <fieldset>
+            <legend>사용자 정보</legend>
+            <ul>
+                <li><label>아이디 <input type="text" placeholder="4자-10자 사이, 공백 없이" required></label></li>
+                <li>
+                    <label for="155-email">이메일 </label>
+                    <input id="155-email" type="email" required>
+                </li>
+                <li><label>비밀번호 <input type="password" placeholder="문자와 숫자, 특수기호 포함" required></label></li>
+                <li><label>비밀번호 확인 <input type="password" required></label></li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>이벤트와 새로운 소식</legend>
+            <input id="155-1" type="radio" name="155-radio" value="yes">
+            <label for="155-1"> 메일 수신</label>
+            <label><input type="radio" name="155-radio" value="no" checked>메일 수신 안함</label>
+
+        </fieldset>
+        <div>
+            <input type="submit" value="가입하기">
+            <input type="reset" value="취소">
+        </div>
+    </form>
+
+    <h2>other tags</h2>
+    <form>
+        <fieldset>
+            <label for="memo">메모</label>
+            <textarea id="memo" cols="40" rows="4"></textarea><br>
+
+            <label for="prod1">select</label>
+            <select id="prod1">
+                <option value="1" selected>11111</option>
+                <option value="2">22222</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <label for="prod2">select mutiple</label>
+            <select id="prod2" multiple>
+                <option value="11" selected>11111</option>
+                <option value="22">22222</option>
+                <option value="33">3</option>
+                <option value="44">4</option>
+                <option value="55">5</option>
+            </select><br>
+            <button type="submit">submit</button>
+            <button type="reset">reset</button>
+            <button type="button">just button</button>
+        </fieldset>
+    </form>
+</body>
+</html>
