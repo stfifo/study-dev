@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>text-align</title>
+    <style>
+      p {
+        width:410px;
+        border:1px solid #222;
+        padding:10px;
+        margin:10px;
+        font-size:1.1em;
+      }
+
+      #ip1 {
+        text-align: center;
+      }
+
+      .cp {
+        text-align: end;
+        line-height: 200%;
+      }
+
+      #ip2 {
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+        /* line-height와 height 똑같이 하면 세로로 가운데 정렬됨 */
+      }
+
+      .shadow1 {
+        color: blanchedalmond;
+        text-shadow: 2px 2px gray;
+        text-transform: capitalize;
+        letter-spacing: 0.2em;
+      }
+
+      .shadow2 {
+        text-shadow: 5px 5px 4px gray;
+        text-transform: lowercase;
+      }
+
+      .shadow3 {
+        color: rgb(241, 141, 141);
+        font-weight: 800;
+        text-shadow: 7px -7px 3px blue;
+        text-transform: uppercase;
+      }
+
+      .hh2 {
+        word-spacing: 50%;
+      }
+
+      .ul1 {
+        list-style-type: decimal-leading-zero;
+      }
+
+      .ul2 {
+        list-style-image: url('images/dot.png');
+        /* list-style-image 속성이 list-style-type 속성보다 항상 화면 표시 우선권을 가짐 */
+      }
+
+      .ul3 {
+        list-style-position: inside;
+        list-style: lower-alpha;
+      }
+
+      table {
+        caption-side: bottom;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      td, th {
+        border: 1px dotted gray;
+        padding: 5px;
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>   
+    <p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
+    <p id="ip1">레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+    <p class="cp">껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다. 레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+    <p id="ip2">껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
+    <h2 class="shadow1">html</h2>
+    <h2 class="shadow2">CSS</h2>
+    <h2 class="shadow3">JavaScript</h2>
+    <h2 class="hh2">Don't look back in anger</h2>
+
+    <ul class="ul1">
+        <li>apple</li>
+        <li>banana</li>
+        <li>mandarin</li>
+        <li>orange</li>
+    </ul>
+
+    <ul class="ul2">
+        <li>bbb</li>
+        <li>ccc</li>
+        <li>ddd</li>
+    </ul>
+
+    <ul class="ul3">
+        <li>abc</li>
+        <li>cbd</li>
+        <li>cdfds</li>
+    </ul>
+
+    <br><hr>
+    <h2>table style</h2>
+
+    <table>
+        <caption>선물용과 가정용 상품 구성</caption>
+        <thead>
+            <tr>
+                <th>용도</th>
+                <th>중량</th>
+                <th>개수</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">선물용</td>
+                <td>3</td>
+                <td>11~16과</td>
+                <td>35000원</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>18~26</td>
+                <td>52000원</td>
+            </tr>
+            <tr>
+                <td rowspan="2">가정용</td>
+                <td>3</td>
+                <td>11~16</td>
+                <td>30000원</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>18~26</td>
+                <td>47000원</td>
+            </tr>
+        </tbody>
+    </table>
+
+  </body>
+</html>
