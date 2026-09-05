@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch8 practice</title>
+    <style>
+        .div1 {
+            border: 1px solid gray;
+            width: 400px;
+            height: 100px;
+            box-sizing: border-box;
+            border-radius: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .div2 {
+            border-style: dashed;
+            border-width: 1px 4px 8px;
+            width: 70%;
+            height: 100px;
+            box-shadow: 7px 4px 5px 3px burlywood;
+            margin: 30px 50px;
+        }
+
+        .div3 {
+            border-style: solid;
+            border-width: 1px 2px 4px 8px;
+            border-color: rgb(61, 135, 135);
+            border-radius: 20px;
+            margin: 20px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+        .div4 {
+            border-style: solid;
+            border-width: 1px 3px;
+            border-bottom-right-radius: 30px;
+            padding: 20px;
+        }
+        .div5 {
+            border: solid 1px blue;
+        }
+
+        ul {list-style: none;}
+        li {
+            display: inline-block;
+            border: solid 1px black;
+            width: 100px; height: 40px;
+            margin: 10px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        img {
+            float: left;
+            margin-right: 40px;
+        }
+
+        #box1 {
+            background-color: yellow;
+            float: left;
+            width: 100px;
+            height: 75px;
+            line-height: 75px;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        #box2 {
+            background-color: blue;
+            float: right;
+            width: 100px;
+            height: 75px;
+            line-height: 75px;
+            text-align: center;
+            margin-left: 10px;
+        }
+
+        #clear-p {
+            clear: both;
+        }
+
+        #pos1 {
+            position: relative;
+            left: 50px;
+            border: dotted 2px gray;
+        }
+
+        #pos2 {
+            position: relative;
+            top: 20px;
+            left: 25%;
+            border: 1px solid black;
+        }
+
+        #pos3 {
+            border: solid 2px salmon
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>box model</h2>
+    <div class="div1">Slip inside the eye of your mind. Don't you know you might find. A better place to play?You said that you'd never been. But all the things that you've seen. Will slowly fade away</div>
+    <div class="div2">Slip inside the eye of your mind. Don't you know you might find. A better place to play?You said that you'd never been. But all the things that you've seen. Will slowly fade away</div>
+    <div class="div3">Slip inside the eye of your mind. Don't you know you might find. A better place to play?You said that you'd never been. But all the things that you've seen. Will slowly fade away</div>
+    <div class="div4">Slip inside the eye of your mind. Don't you know you might find. A better place to play?You said that you'd never been. But all the things that you've seen. Will slowly fade away</div>
+    <div class="div5">Slip inside the eye of your mind. Don't you know you might find. A better place to play?You said that you'd never been. But all the things that you've seen. Will slowly fade away</div>
+
+    <h2>layout</h2>
+    <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+    </ul>
+
+    <p>Ex et adipisicing voluptate aliqua cupidatat nulla. Laboris est sint sit aliqua enim. Aute Lorem eu sint aute sunt proident. Do culpa consectetur elit duis laboris reprehenderit incididunt nulla. Irure exercitation tempor aliqua laboris cupidatat anim in non officia aliquip excepteur fugiat labore.</p>
+    <img src="images/tree.png">
+    <p>Lorem ipsum reprehenderit adipisicing exercitation enim velit veniam incididunt sit consectetur elit exercitation. Commodo veniam sit quis nisi ea. Ipsum do aliqua nostrud laboris elit duis adipisicing id Lorem qui. Labore dolor ipsum enim incididunt. Velit qui cillum sunt labore incididunt duis aute Lorem nulla et. Sint commodo aute amet laboris ullamco exercitation Lorem dolore veniam ut reprehenderit incididunt. Laborum nulla eiusmod cillum irure anim aute.</p>
+    <p>Excepteur voluptate ad irure ipsum duis. Deserunt cupidatat commodo proident eu mollit cillum commodo quis quis et ad. Incididunt adipisicing enim laboris voluptate.</p>
+
+    <br><br><br><br><br><br>
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+    <p>Lorem ipsum reprehendecing id Lorem qui. L enim incididunt. Velit qui cillum sunt labore incididunt duis aute Lorem nulla et. Sint</p>
+    <p id="clear-p">commodo aute amet laboris ullamco exercitation Lorem dolore veniam ut reprehenderit incididunt. Laborum nulla eiusmod cillum irure anim aute.</p>
+
+    <h2>8-5. web element position</h2>
+    <p id="pos1">Ex et adipisicing voluptate aliqua cupidatat nulla. Laboris est sint sit aliqua enim. Aute Lorem eu sint aute sunt proident. Do culpa consectetur elit duis laboris reprehenderit incididunt nulla. Irure exercitation tempor aliqua laboris cupidatat anim in non officia aliquip excepteur fugiat labore.</p>
+    <p id="pos2">Lorem ipsum reprehenderit adipisicing exercitation enim velit veniam incididunt sit consectetur elit exercitation. Commodo veniam sit quis nisi ea. Ipsum do aliqua nostrud laboris elit duis adipisicing id Lorem qui. Labore dolor ipsum enim incididunt. Velit qui cillum sunt labore incididunt duis aute Lorem nulla et. Sint commodo aute amet laboris ullamco exercitation Lorem dolore veniam ut reprehenderit incididunt. Laborum nulla eiusmod cillum irure anim aute.</p>
+    <p id="pos3">Excepteur voluptate ad irure ipsum duis. Deserunt cupidatat commodo proident eu mollit cillum commodo quis quis et ad. Incididunt adipisicing enim laboris voluptate.</p>
+
+</body>
+</html>
