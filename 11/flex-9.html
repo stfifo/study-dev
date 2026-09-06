@@ -15,19 +15,23 @@
     /* Do it! flex-basis 속성을 사용해 플렉스 항목의 기본 크기 지정하기 */                       
     .box {
       background-color:#222;   
+      flex-basis: 150px;
     }
     p {
       color:#fff;
       text-align: center;
       font-size: 2rem;
     }
+
+    #i1 {flex-grow: 1;}
+    #i3 {flex-grow: 2;}
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="box"><p>가나다라마</p></div>
-    <div class="box"><p>가나다라마바사</p></div>
-    <div class="box"><p>ABCDE</p></div>
+    <div class="box" id="i1"><p>가나다라마</p></div>
+    <div class="box" id="i2"><p>가나다라마바사</p></div>
+    <div class="box" id="i3"><p>ABCDE</p></div>
   </div>
   
 </body>
