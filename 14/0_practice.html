@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>Transform - translate</title>
+    <style>
+        .container {
+            width:800px;
+            height:200px;
+            margin:20px auto;
+        }
+        .origin {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            float: left;
+            margin: 40px;
+        }
+        .origin > div {				
+            width:100px;
+            height:100px;
+            background-color:orange;
+            transition: 3s;
+        }
+
+        .origin1 {
+            perspective: 300px;
+            width: 200px;
+            height: 200px;
+            border: 1px dotted gray;
+            float: left;
+
+        }
+
+        .origin1 > div {				
+            width:200px;
+            height:200px;
+            transition: 3s;
+        }
+
+    /* Do it! 마우스 오버하면 사각형 이동하기 */
+        #movex:hover {
+            transform: translate(50%, -50%);
+            perspective: 300px;
+        }
+        #movey:hover {
+            transform: translateY(-20px);
+        }
+        #movez:hover {
+            transform: translate3d(50px, 20px, 30px);
+        }
+
+        #scalex {transform: scale(0.7, 1.5);}
+        #scaley {transform: scaleY(0.3);}
+        #scalexy {transform: scale(0.4);}
+
+        #rotatex {transform: rotate(40deg); background: url(images/home.png) no-repeat;}
+        #rotatey {transform: rotate(70deg); background: url(images/home.png) no-repeat;}
+        #rotatexy {
+            transform: rotateX(-60deg);
+            background: url(images/home.png) no-repeat;
+        }
+
+		</style>
+	</head>
+	<body>		
+		<div class="container">
+			<div class="origin">
+				<div id="movex"></div>		
+			</div>
+			<div class="origin">
+				<div id="movey"></div>	
+			</div>
+			<div class="origin">
+				<div id="movez"></div>		
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="origin">
+				<div id="scalex"></div>		
+			</div>
+			<div class="origin">
+				<div id="scaley"></div>	
+			</div>
+			<div class="origin">
+				<div id="scalexy"></div>		
+			</div>
+		</div>
+		<div class="container1">
+			<div class="origin1">
+				<div id="rotatex"></div>		
+			</div>
+			<div class="origin1">
+				<div id="rotatey"></div>	
+			</div>
+			<div class="origin1">
+				<div id="rotatexy"></div>		
+			</div>
+		</div>
+
+	</body>
+</html>

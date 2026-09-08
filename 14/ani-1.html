@@ -9,10 +9,20 @@
       height: 100px;
       background-color: #fa0;
       /* Do it! 2초 동안 애니메이션 실행하기 */
+      /* animation-name: slideRight;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in; */
+      animation: slideRight 2s infinite alternate ease-in;
 
     }
 
     /* Do it! @keyframes로 애니메이션 정의하기 */
+    @keyframes slideRight {
+      from {transform: translateX(0);}
+      to {transform: translateX(500px);}
+    }
 
   </style>
 </head>
