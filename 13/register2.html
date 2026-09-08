@@ -4,6 +4,26 @@
   <meta charset="UTF-8">
   <title>회원 가입</title>
   <link rel="stylesheet" href="css/register2.css">
+
+  <style>
+    input[type=text], input[type=password], input[type=email], input[type=tel] {
+      border: 1px solid gray;
+      border-radius: 5px;
+      font-size: 13px;
+      padding: 5px;
+      width: 200px;
+    }
+
+    input[required] {
+      border: solid salmon 1px;
+      border-radius: 5px;
+    }
+
+    input[readonly] {border: none;}
+
+    #no-border {border: none !important}
+
+  </style>
 </head>
 <body>
   <form id="signup">
@@ -45,7 +65,7 @@
         </li>  
       </ul>
     </fieldset>
-    <fieldset>
+    <fieldset id="no-border">
       <button type="submit"> 제출 </button> 
     </fieldset>
   </form>

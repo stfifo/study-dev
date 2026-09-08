@@ -22,6 +22,11 @@
     }
 
     /* Do it! 가상 선택자를 사용해 항목 선택하기 */
+    .container :first-child{background-color: yellow;}
+    .container :last-child {background-color: aqua;}
+    .container div:only-child {background-color: lavender;}
+    .container :nth-child(4) {background-color: coral;}
+
 
   </style>
 </head>
@@ -31,6 +36,8 @@
     <div>두 번째</div>
     <p>세 번째</p>
     <div>네 번째</div>
+    <p>5번째</p>
+    <p>6번째</p>
   </div>
   <div class="container">
     <div>혼자~</div>
