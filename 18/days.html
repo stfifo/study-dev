@@ -39,6 +39,13 @@
 
   <script>
     // Do it! Date 객체 연습하기
+    let now = new Date();
+    let start = new Date("2026-09-01");
+    let cal_time = now.getTime() - start.getTime();
+
+    cal_time = Math.round(cal_time / (1000*60*60*23));
+
+    document.querySelector('#result').innerText = cal_time;
 
   </script>
 </body>

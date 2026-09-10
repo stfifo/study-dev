@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>What time is it?</title>
+	<style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 1.2em;
+    }
+	</style>
+</head>
+<body>
+    <script>
+    let now = new Date();
+    document.write(now);
+
+    let arr1 = new Array();
+    let arr2 = Array("one", "two", "three");
+    let arr3 = ["11", "22", "33"];
+
+    for (let i=0; i<arr3.length; i++) {
+        document.write(`<p>${arr3[i]}</p>`);
+    }
+
+    let arr2_concat_arr3 = arr2.concat(arr3);
+    document.write(`<p>arr2+arr3 : ${arr2_concat_arr3}<\p>`);
+    let string1 = arr3.join('/');
+    document.write(`join: ${string1}`);
+
+    arr2.push("four", "five");
+    arr3.unshift("00");
+    document.write(`<p>slice: ${arr3.slice(2,4)}</p>`);
+
+    let date1 = new Date('2025-06-03');
+
+
+
+    </script>
+</body>
+</html>
+

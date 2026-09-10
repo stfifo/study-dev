@@ -19,6 +19,56 @@
 	<script>
 		// Do it! 함수를 사용하지 않고 2와 3 더하기
 
+		function add_num() {
+			let a = 2;
+			let b = 3;
+			document.write(`결과: ${a+b}\n`);
+		}
+
+		var g_result = 0;
+		function add_var() {
+			l_result = 10 * 20;
+			g_result = 10 * 20;
+		}
+
+		add_num();
+		add_var();
+		document.write(l_result+`\n`);
+		document.write(g_result+`\n`);
+
+		function add_para(a, b) {
+			return a+ b;
+		}
+
+		function para(a=2, b=10, c) {
+			return a*b+c;
+		}
+
+		document.write(add_para(4, 5)+`\n`);
+		document.write(para(3, 5, 2)+`\n`);
+
+		function cal(n) {
+			let sum = 0;
+			for (let i=1; i<=n; i++) {
+				sum += i;
+			}
+			return sum;
+		}
+		document.write(cal(10));
+
+		// 익명 함수
+		let sum1 = function(a, b) {
+			return a+b;
+		}
+		// 즉시 실행 함수 (immediately invoked function expression)
+		let sum2 = (function(a,b) {
+			return a+b;
+		}(2, 3));
+
+		//화살표 함수
+		let sum3 = (a, b) => a + b;
+
+		document.write(`익명: ${sum1(2, 3)} iife: ${sum2} arrow: ${sum3(2,3)}`)
 	</script>	
 </body>
 </html>
