@@ -20,11 +20,21 @@
 </head>
 <body>
   <div class="container">
-    <img src="images/cat.jpg" id="cat">		
+    <img src="images/cat.jpg" id="cat">
+    <img src="images/kitty-1.png" id="kitty1" style="margin: 10px; border: 1px solid gray;">	
   </div>
 
 	<script>
     // Do it! DOM을 사용해 이벤트 처리하기 
+    let cat = document.querySelector('#cat');
+    cat.onclick = () => alert('이미지 클릭함');
+
+    let kitty = document.querySelector('#kitty1');
+    kitty.onclick = changeKitty;
+
+    function changeKitty() {
+      kitty.src = "images/kitty-2.png"
+    }
 
 	</script>
 </body>

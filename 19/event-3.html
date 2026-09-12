@@ -16,11 +16,11 @@
       align-items: center;
       height: 100vh;
     }
-		.container {
-			width: 500px;
-			height: 300px;
-			border: 1px solid #222;
-		}
+	.container {
+		width: 500px;
+		height: 300px;
+		border: 1px solid #222;
+	}
   </style>
 </head>
 <body>
@@ -28,6 +28,10 @@
 
 	<script>
 		// Do it! event 객체 사용하기
+		let container_object = document.querySelector(".container");
+		container_object.onclick = (event) => {
+			alert(`event position : ${event.pageX}, ${event.pageY}`);
+		}
 
 	</script>
 </body>

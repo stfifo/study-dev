@@ -13,5 +13,17 @@
 		<li>CSS</li>
 		<li>Javascript</li>
 	</ul>
+	<script>
+		let newLi = document.createElement("li");
+		let textNode = document.createTextNode("typescript");
+		newLi.appendChild(textNode);
+		document.querySelector('ul').appendChild(newLi);
+
+		let new_img = document.createElement("img");
+		new_img.src = "images/books.png";
+		document.querySelector("body").appendChild(new_img);
+
+		document.querySelector("h1").remove();
+	</script>
 </body>
 </html>

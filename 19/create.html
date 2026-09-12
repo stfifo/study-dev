@@ -18,5 +18,36 @@
     <hr>  
     <ul id="itemList"></ul>  
   </div>
+
+  <script>
+    const li_parent = document.querySelector("#itemList");
+    function register() {
+      let newItem = document.createElement("li");
+      let subject = document.querySelector("#subject");
+      let inputText = document.createTextNode(subject.value);
+
+      newItem.appendChild(inputText);
+
+      li_parent.appendChild(newItem);
+
+      subject.value = "";
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const button = document.querySelector("button");
+      button.addEventListener("click", function(event) {
+        event.preventDefault();
+        register();
+      });
+    });
+
+    li_parent.addEventListener("click", (event) => {
+      if (event.target.tagName === "LI") {
+        if (confirm("삭제하시겠습니까?")) {
+          event.target.remove();
+        }
+      }
+    });
+  </script>
 </body>
 </html>

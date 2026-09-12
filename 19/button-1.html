@@ -21,6 +21,18 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
+    .disabled {
+      color: #ccc;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+    }
+
+    .enabled {
+      color: white;
+      background-color: rgb(88, 88, 255);
+      border: 1px solid rgb(88, 88, 255));
+    }
     /* Do it! 필요한 클래스 스타일 정의하기 */
   </style>
 </head>
@@ -35,7 +47,23 @@
   </div>  
 
   <script>
-    // Do it! 체크 박스에 체크하면 버튼 활성화하기
+  // Do it! 체크 박스에 체크하면 버튼 활성화하기
+    document.addEventListener('DOMContentLoaded', function() {
+      const checkbox = document.querySelector('#agree');
+      const go_button = document.querySelector('#proceed');
+
+      checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          go_button.classList.remove('disabled');
+          go_button.classList.add('enabled');
+          go_button.disabled = false;
+        } else {
+          go_button.classList.add('disabled');
+          go_button.classList.remove('enabled');
+          go_button.disabled = true;
+        }
+      });
+    })
   </script>
 </body>
 </html>

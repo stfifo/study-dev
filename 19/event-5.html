@@ -19,6 +19,7 @@
     img {
       padding: 20px;
       height: 250px;
+      width: 250px;
       border: 1px solid #eee;
       border-radius: 10px;
       box-shadow: 2px 2px 5px #ccc;
@@ -32,6 +33,27 @@
   
 	<script>
     // Do it! 이벤트 리스너로 이벤트 처리하기
+    let cat = document.querySelector("#cat");
+
+    cat.addEventListener("mouseover", () => {
+      cat.style.backgroundColor = "lightgreen";
+      cat.style.borderRadius = "50%";
+      cat.src = "images/kitty-2.png";
+    }, false);
+    cat.addEventListener("mouseout", () => {
+      cat.style.backgroundColor = "white";
+      cat.style.height = "250px";
+      cat.style.width = "250px";
+      cat.style.borderRadius = "0%";
+      cat.src="images/kitty-1.png";
+    }, false);
+
+    function changePic() {
+      cat.src = "images/kitty-2.png";
+    }
+
+    document.querySelector("#cat").style.border = "4px dotted black";
+
 
 	</script>
 </body>
