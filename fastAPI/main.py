@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 from pydantic import BaseModel
 
 app = FastAPI()
@@ -16,7 +16,7 @@ def login_handler():
 def read_user_handler(user_id: int):
     return {"user_id": user_id, "message": f"사용자 {user_id} 조회"}
 
-@app.get("/items")
+@app.get("/items_1")
 def read_items_handler(max_price: int | None = None):
     return {"max_price": max_price}
 
@@ -25,7 +25,7 @@ class Item(BaseModel):
     price: int
     in_stock: bool = True
 
-@app.post("/items")
+@app.post("/items_2")
 def create_item_handler(item: Item):
     return {
         "message": f"{item.name}이 추가됨",
@@ -40,3 +40,7 @@ def update_item_handler(item_id: int, assignee: str, item: Item):
         "assignee": assignee,
         "message": f"{item.name} 가격: {item.price}"
     }
+
+@app.post("/items_3", response_model=Item, status_code=status.HTTP_201_CREATED) # response body에 pydantic model 활용하려면 decorator에서 response_model 옵션 지정
+def create_item_handler2(item: Item):
+    return item
