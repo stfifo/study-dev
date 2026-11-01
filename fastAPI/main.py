@@ -41,6 +41,23 @@ def update_item_handler(item_id: int, assignee: str, item: Item):
         "message": f"{item.name} 가격: {item.price}"
     }
 
-@app.post("/items_3", response_model=Item, status_code=status.HTTP_201_CREATED) # response body에 pydantic model 활용하려면 decorator에서 response_model 옵션 지정
+@app.post("/items_3", response_model=Item, status_code=status.HTTP_201_CREATED)
+# response body에 pydantic model 활용하려면 decorator에서 response_model 옵션 지정
 def create_item_handler2(item: Item):
+    return item
+
+# 90p self check
+class order_response(BaseModel):
+    order_id: int
+    pick_up: bool | None = None
+
+@app.get("/orders/{order_id}", response_model=order_response)
+def order_handler(order_id: int, pickup: bool | None = None):
+    return {
+        "order_id": order_id,
+        "pickup": pickup
+    }
+
+@app.post("/orders_2/{order_id}", response_model=order_response)
+def order_handler(item: order_response):
     return item
